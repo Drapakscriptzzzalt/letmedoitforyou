@@ -1,0 +1,163 @@
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+
+local w = library:CreateWindow("THE")
+
+local b = w:CreateFolder("Switch hub")
+
+b:Button("Lag Switch",function()
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+
+local w = library:CreateWindow("saa3")
+
+local b = w:CreateFolder("saa3")
+
+b:Box("Lag KeyBind","string",function(value)
+
+getgenv().zzz = value
+
+end)
+
+getgenv().zzz = "z"
+
+getgenv().moose = game.Players.LocalPlayer:GetMouse()
+
+getgenv().itch = false
+
+moose.KeyUp:connect(function(key)
+
+if key == zzz then
+
+if itch == false then
+
+   getgenv().itch = true
+
+settings():GetService("NetworkSettings").IncomingReplicationLag = 10000
+
+else
+
+getgenv().itch = false
+
+settings():GetService("NetworkSettings").IncomingReplicationLag = 0
+
+end
+
+end
+
+end)
+
+end)
+
+b:Button("Gravity Switch",function()
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+
+local w = library:CreateWindow("saa")
+
+local b = w:CreateFolder("saa")
+
+b:Box("Gravity","number",function(value)
+
+getgenv().Gravitytoswitchto = value
+
+end)
+
+b:Box("KeyBind","string",function(value)
+
+getgenv().KeyBind = value
+
+end)
+
+getgenv().KeyBind = "z"
+
+getgenv().Gravitytoswitchto = 30
+
+getgenv().Mouse = game.Players.LocalPlayer:GetMouse()
+
+getgenv().CurrentGravity = nil
+
+getgenv().switch = false
+
+Mouse.KeyUp:connect(function(key)
+
+if key == KeyBind then
+
+if switch == false then
+
+   getgenv().switch = true
+
+getgenv().CurrentGravity = game.Workspace.Gravity
+
+game.Workspace.Gravity = Gravitytoswitchto
+
+else
+
+getgenv().switch = false
+
+game.Workspace.Gravity = CurrentGravity
+
+end
+
+end
+
+end)
+
+end)
+
+b:Button("Speed Switch",function()
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+
+local w = library:CreateWindow("saa2")
+
+local b = w:CreateFolder("saa2")
+
+b:Box("Speed","number",function(value)
+
+getgenv().Speedtoswitchto = value
+
+end)
+
+b:Box("KeyBind","string",function(value)
+
+getgenv().Key = value
+
+end)
+
+getgenv().Key = "z"
+
+getgenv().Speedtoswitchto = 30
+
+getgenv().CurrentSpeed = nil
+
+getgenv().zeus = game.Players.LocalPlayer:GetMouse()
+
+getgenv().Speed = nil
+
+getgenv().bitch = false
+
+zeus.KeyUp:connect(function(key)
+
+if key == Key then
+
+if bitch == false then
+
+   getgenv().bitch = true
+
+getgenv().CurrentSpeed = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
+
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speedtoswitchto
+
+else
+
+getgenv().bitch = false
+
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = CurrentSpeed
+
+end
+
+end
+
+end)
+
+end)
